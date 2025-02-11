@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --Softorange: hsl(35, 77%, 62%);
+  --Softred: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayishblue: hsl(233, 8%, 79%);
+  --Darkgrayishblue: hsl(236, 13%, 42%);
+  --Verydarkblue: hsl(240, 100%, 5%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+p {
+  font-style: 15px;
+  line-height: 1.5;
+  color: var(--Darkgrayishblue);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+nav a {
+  color: var(--Darkgrayishblue);
+  padding: 10px;
+}
+
+.hero-content{
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+}
+.pic-container {
+  width: 68%;
+}
+.pic-container img {
+  width: 100%;
+}
+.pic-container h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--Verydarkblue);
+}
+.pic-container-text button {
+  height: 40px;
+  width: 150px;
+  background-color: var(--Softred);
+  border: none;
+  color: var(--Off-white);
+  font-size: 1.1rem;
+}
+.pic-container-text{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 100px;
+}
+.pic-container-text div {
+  width: 47%;
+
+}
+.pic-container-text button {
+  margin-top: 25px;
+}
+.text-container{
+padding: 30px;
+width:30%;
+background-color:var(--Verydarkblue);
+align-items: center;
+}
+.hero-content{
+    display: flex;
+    justify-content: space-between; 
+}
+.text-container h1{
+    color: var(--Softorange);
+    font-size: 1.6rem;
+}
+.text-container h3{
+    color: var(--Off-white);
+    margin-top: 10px;
+}
+.text-container p{
+   padding: 20px 0;
+}
+.text-container h3{
+    padding-top: 40px;
+}
+.pic-container img:last-of-type{
+    display: none;
+    width: 370px;
+
+}
+/* when trying to remove the second image on your nav bar 
+we make use of last of type, and first of type simply means removing the 
+displaying none (of the first image)  */
+nav img:last-of-type{
+    display: none;
+}
+@media(max-width: 576px){
+nav a{
+    display: none;
+}
+nav img:last-of-type{
+    display: block;
+}
+.hero-content{
+    display: block;
+}
+.pic-container img:first-of-type{
+    display: none;
+}
+.pic-container img:last-of-type{
+    display: block;
+    /* width: 100%; */
+}
+.pic-container-text, .text{
+    display: inline;
+}
+.pic-container h1{
+    padding-top: 15px;
+    font-size: 3.0rem;
+    word-spacing: 4px;
+}
+.pic-container{
+    width: 100%;
+}
+.pic-container p{
+    padding-top: 15px;
+}
+.text-container{
+    width: 100%;
+    margin-top: 20px;
+}
+}
+.card{
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.cardinfo{
+  padding: 24px;
+}
+.content-card{
+  display: flex;
+  flex-direction: row;
+}
+.content-card img{
+  width: 90px;
+  height: 100px;
+}
+.cardinfo h1{
+  color:var(--Grayishblue);
+}
+.cardinfo h3, p{
+  color: var(--Verydarkblue);
+}
+@media(max-width: 576px){
+  .content-card{
+    flex-direction:column;
+    width: 100%;
+    gap: 20px;
+  }
+  .content-card img{
+    height: 150px;
+
+  }
+}
